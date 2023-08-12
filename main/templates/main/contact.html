@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="col">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="card-text">
+                Здесь должен быть<br>
+                какой-то текст
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="col">
+    <div class="card shadow-sm">
+
+
+        <div class="card-body">
+            <form method="POST">
+                <h3>Hапишите нам</h3>
+                {% csrf_token %}
+                <input class="form-control mb-2" name="name">
+                <input class="form-control mb-2" name="email">
+                <textarea class="form-control mb-2" name="massage"></textarea>
+                <button type="submit" class="btn btn-primary form-control">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
